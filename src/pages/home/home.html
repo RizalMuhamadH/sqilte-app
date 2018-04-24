@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Add User
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="moveToPage()" color="royal"  >
+        <ion-icon name="person"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="addUsers()">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>
+          Identification
+        </ion-label>
+        <ion-input [(ngModel)]="identification" name="Identification" type="number">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          Name
+        </ion-label>
+        <ion-input [(ngModel)]="name" name="Name" type="text">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>
+          Email
+        </ion-label>
+        <ion-input [(ngModel)]="email" name="email" type="email">
+        </ion-input>
+      </ion-item>
+      <button class="margin_button" ion-button type="submit" block round>Add User</button>
+    </ion-list>
+  </form>
+</ion-content>
